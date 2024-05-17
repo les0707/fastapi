@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precious Metals Price Converter</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div id="dashboardRedirect"></div>
+
+    <div class="container">
+        <h1>Precious Metals Price Converter</h1>
+        <div class="form-group">
+            <label for="metal">Select Metal:</label>
+            <select id="metal">
+                <option value="XAU">Gold</option>
+                <option value="XAG">Silver</option>
+                <option value="XPT">Platinum</option>
+                <option value="XPD">Palladium</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="currency">Select Currency:</label>
+            <select id="currency">
+                <option value="USD">USD - United States Dollar</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="GBP">GBP - British Pound Sterling</option>
+                <option value="JPY">JPY - Japanese Yen</option>
+                <option value="AUD">AUD - Australian Dollar</option>
+                <option value="CAD">CAD - Canadian Dollar</option>
+                <option value="CHF">CHF - Swiss Franc</option>
+                <option value="CNY">CNY - Chinese Yuan</option>
+                <option value="HKD">HKD - Hong Kong Dollar</option>
+                <option value="NZD">NZD - New Zealand Dollar</option>
+                <!-- Add more currencies as needed -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="selected-date">Historical Spot Price:</label>
+            <input type="date" id="selected-date" name="selected-date">
+        </div>
+        <!-- Separate buttons for fetching current and historical prices -->
+        <button id="currentPriceButton">Get Current Price</button>
+        <button id="historicalPriceButton">Get Historical Prices</button>
+        <!-- Loading animation -->
+        <div id="loading" style="display: none;">
+            <img src="/static/loading.gif" alt="Loading..." width="50px">
+        </div>
+        <div id="result"></div>
+        <div id="historical-result"></div> <!-- Display historical prices here -->
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
